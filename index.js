@@ -59,9 +59,9 @@ function display(data){
     var results = data.results;
     for(let result of results){
         superheros.append(`<div class="card superhero" style="width: 18rem;">
-            <img class="card-img-top" src="$(result.image.url)" alt="Card image cap">
+            <img class="card-img-top" src="${result.image.url}" alt="Card image cap">
             <div class="card-body">
-            <h5 class="card-title">$(result.name)</h5>
+            <h5 class="card-title">${result.name}</h5>
             <a href="#" class="btn btn-primary">More Info.</a>
             </div>
             </div>`);
