@@ -9,7 +9,7 @@ function append(parent, element){
 document.getElementById("user-input").addEventListener('change' , search);
 function getURL(){
     // GENERATING URL
-    var initial_url = "http://superheroapi.com/api/" ;
+    var initial_url = "http://superheroapi.com/api.php/" ;
     var api_token = "3181413508575888";
     var mid_url = "/search/";
     var entered_name = document.getElementById("user-input").value;
