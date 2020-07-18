@@ -10,7 +10,7 @@ body{
     margin-right: auto;
     display: block;
 }
-button{
+submit{
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -23,17 +23,19 @@ button{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 #superhero{
-    width: 30vw;
+    width: 23vw;
     min-width: 320px;
     border: 1px solid black;
     margin : 10px;
-    height: 20vh;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    /* border-radius: 20%; */
     
 }
 #info{
@@ -41,7 +43,8 @@ button{
     width: 60%;
     height: 100%;
     text-align: left;
-    padding-left: 10px;
+    padding: 20px;
+    padding-top: 20px;
 }
 #image{
     /* display: inline; */
@@ -49,17 +52,77 @@ button{
     height: 100%;
     margin: 0;
     padding: 0;
+    padding-top: 10px;
 }
 #image img{
+    
     max-width: 100%;
-    max-height: 100%;
+    max-height: 90%;
     margin: 0;
     padding: 0;
+    border-radius: 50%;
 }
 i{
     font-size: 3rem;
-    color: pink;
-    left: 15px;
+    color: black;
+    /* left: 15px; */
     position: relative;
     top: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    /* padding-bottom: 5px; */
+}
+/* About Page */
+#title{
+    margin: auto;
+}
+#pic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    border-radius: 50px;
+}
+button{
+    cursor: pointer;
+
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+#details
+{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+/* for hero's power details */
+#power
+{
+    color: black;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    width: 50vw;
+}
+
+#power span
+{
+    font-size: 2rem;
+}
+
+#bio span
+{
+    color: black;
+    font-size: 2rem;
+}
+
+/* for hero's biography details */
+#bio
+{
+    color: black;
+    font-size: 1.5rem;
+    padding-left: 20px;
 }

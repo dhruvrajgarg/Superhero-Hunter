@@ -6,7 +6,7 @@ function createNode(element){
 function append(parent, element){
     return parent.appendChild(element);
 }
-document.getElementById("form").addEventListener('keypress' , search);
+document.getElementById("form").addEventListener('keyup' , search);
 function getURL(){
     // GENERATING URL
     var initial_url = "https://superheroapi.com/api.php/" ;
@@ -46,18 +46,33 @@ function display(data){
         document.getElementById("user-input").value = "";
         window.alert("No super Hero Found");
     }else{
-        for(result of results){
-        var card = template.content.cloneNode(true);
+        for(let result of results){
+            var card = template.content.cloneNode(true);
 
-        card.getElementById("name").innerHTML = 'Name : ' + result.name;
-        card.getElementById("image").children[0].src = result.image.url;
-        card.getElementById("race").innerHTML = 'Race : ' + result.appearance.race;
-        card.getElementById("gender").innerHTML = 'Gender : ' + result.appearance.gender;
+            card.getElementById("name").innerHTML = 'Name : ' + result.name;
+            card.getElementById("image").children[0].src = result.image.url;
+            card.getElementById("race").innerHTML = 'Race : ' + result.appearance.race;
+            card.getElementById("gender").innerHTML = 'Gender : ' + result.appearance.gender;
+            
+            
+            card.getElementById("more-info").addEventListener('click',function(){
+                localStorage.setItem('id',result.id);
+                window.location.assign('./about.html');
+            });
+            card.getElementById("fav").addEventListener('click',function(){
+                    var index = localStorage.length;
+                    var data = JSON.stringify(result);
+                    localStorage.setItem(result.id,data);
+                });
 
-        superheroList.appendChild(card);
-    }
+            superheroList.appendChild(card);
+        }
     }
     // document.getElementById("form").remove();
 }
 
 
+//to visit the favourites page
+document.getElementById("fav_button").addEventListener('click',()=>{
+    window.location.assign('./favourites.html');
+});
