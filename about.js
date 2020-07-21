@@ -18,40 +18,40 @@ function fetch()
 
         //adding details about power
         var power = document.getElementById("power");
-        var int = document.createElement('p');
-        int.innerText = "Intelligence : " + response.powerstats.intelligence;
-        power.appendChild(int);
-        var int = document.createElement('p');
-        int.innerText = "Combat : " + response.powerstats.combat;
-        power.appendChild(int);
-        var int = document.createElement('p');
-        int.innerText = "Power : " + response.powerstats.power;
-        power.appendChild(int);
-        var int = document.createElement('p');
-        int.innerText = "Speed : " + response.powerstats.speed;
-        power.appendChild(int);
-        var int = document.createElement('p');
-        int.innerText = "Strength : " + response.powerstats.strength;
-        power.appendChild(int);
+        var p = document.createElement('p');
+        p.innerText = "Intelligence : " + response.powerstats.intelligence;
+        power.appendChild(p);
+        var p = document.createElement('p');
+        p.innerText = "Combat : " + response.powerstats.combat;
+        power.appendChild(p);
+        var p = document.createElement('p');
+        p.innerText = "Power : " + response.powerstats.power;
+        power.appendChild(p);
+        var p = document.createElement('p');
+        p.innerText = "Speed : " + response.powerstats.speed;
+        power.appendChild(p);
+        var p = document.createElement('p');
+        p.innerText = "Strength : " + response.powerstats.strength;
+        power.appendChild(p);
 
         //adding details about biography
         var bio = document.getElementById("bio");
-        var full = document.createElement('p');
-        full.innerText = "Full Name : " + response.biography['full-name']; 
-        bio.appendChild(full);
-        var full = document.createElement('p');
-        full.innerText = "Alias : " + response.biography.aliases;
-        bio.appendChild(full);
-        var full = document.createElement('p');
-        full.innerText = "Alignment : " + response.biography.alignment;
-        bio.appendChild(full);
-        var full = document.createElement('p');
-        full.innerText = "Publisher : " + response.biography.publisher;
-        bio.appendChild(full);
-        bio.appendChild(full);
-        var full = document.createElement('p');
-        full.innerText = "Alter-Egos : " + response.biography['alter-egos']; 
-        bio.appendChild(full);
+        var p = document.createElement('p');
+        p.innerText = "Full Name : " + response.biography['p-name']; 
+        bio.appendChild(p);
+        var p = document.createElement('p');
+        p.innerText = "Alias : " + response.biography.aliases;
+        bio.appendChild(p);
+        var p = document.createElement('p');
+        p.innerText = "Alignment : " + response.biography.alignment;
+        bio.appendChild(p);
+        var p = document.createElement('p');
+        p.innerText = "Publisher : " + response.biography.publisher;
+        bio.appendChild(p);
+        bio.appendChild(p);
+        var p = document.createElement('p');
+        p.innerText = "Alter-Egos : " + response.biography['alter-egos']; 
+        bio.appendChild(p);
     };
 }
 
